@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LifeX - Internal Broker Analyse</title>
+    <link rel="stylesheet" href="/styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700;900&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels@2"></script>
+</head>
+<body>
+    <nav class="top-navigation">
+        <div class="nav-container">
+            <div class="nav-menu">
+                <a href="/" class="nav-link">Main Dashboard</a>
+                <a href="/internal-analyse" class="nav-link active">Internal Broker Analyse</a>
+            </div>
+        </div>
+    </nav>
+
+    <header>
+        <div class="header-content">
+            <img src="lifex_styles/lifex_logo.png" alt="LifeX Logo" class="logo">
+            <h1>Internal Broker Analyse</h1>
+        </div>
+    </header>
+
+    <main class="dashboard">
+        <section class="upload-section">
+            <h2>Upload Operation Dataset</h2>
+            <div class="upload-container">
+                <div class="upload-area" id="uploadArea">
+                    <div class="upload-icon">📊</div>
+                    <p>Upload Database_Fuzzy Match_troubleshooting.xlsx</p>
+                    <p class="upload-hint">From Operation Datasets folder</p>
+                    <input type="file" id="fileInput" accept=".xlsx,.xls" style="display: none;">
+                </div>
+                <div class="upload-status" id="uploadStatus"></div>
+            </div>
+        </section>
+
+        <section class="analyse-section">
+            <h2>Internal Broker Performance Analysis</h2>
+            <div class="analysis-grid" id="analysis-content">
+                <div class="analysis-placeholder">
+                    <p>Upload your Operation Dataset Excel file to start the analysis</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script src="/internal-analyse.js"></script>
+</body>
+</html>

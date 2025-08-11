@@ -3,67 +3,34 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>RedNote Leads Dashboard</title>
-    <link rel="stylesheet" href="styles.css">
-    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.5/xlsx.full.min.js"></script>
+    <title>LifeX - Rednote Customer Settle Rate Dashboard</title>
+    <link rel="stylesheet" href="/styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700;900&display=swap" rel="stylesheet">
 </head>
 <body>
-    <div class="container">
-        <header>
-            <div class="header-logo">
-                <img src="lifex_styles/lifex_logo.png" alt="LifeX Logo" class="logo">
+    <header>
+        <div class="header-content">
+            <img src="lifex_styles/lifex_logo.png" alt="LifeX Logo" class="logo">
+            <h1>Rednote Customer Settle Rate Dashboard</h1>
+        </div>
+    </header>
+
+    <main class="dashboard">
+        <section class="kpi-section">
+            <h2>Internal Brokers</h2>
+            <div class="kpi-grid" id="internal-brokers">
+                <!-- Internal broker KPI cards will be populated here -->
             </div>
-            <h1>RedNote Leads Settlement Dashboard</h1>
-            <p class="dashboard-subtitle">Broker Performance Analytics</p>
-        </header>
+        </section>
 
-        <main>
-            <!-- File Upload Section -->
-            <section class="upload-section">
-                <h2>Upload Data File</h2>
-                <div class="upload-container">
-                    <input type="file" id="fileInput" accept=".csv,.json,.xlsx,.xls" class="file-input">
-                    <label for="fileInput" class="file-label">
-                        <span class="upload-icon">📁</span>
-                        Choose File or Drag & Drop
-                    </label>
-                    <div class="file-info" id="fileInfo"></div>
-                    <button id="uploadBtn" class="upload-btn" disabled>Upload & Process</button>
-                </div>
-            </section>
-
-            <!-- Data Sections - Initially Hidden -->
-            <div id="dataSections" class="data-sections" style="display: none;">
-                <!-- KPI Cards Section -->
-                <section class="kpi-section">
-                    <h2>Broker Settlement Rates</h2>
-                    <div class="kpi-cards" id="kpiCards">
-                        <!-- KPI cards will be dynamically generated -->
-                    </div>
-                </section>
-
-                <!-- Charts Section - Side by Side -->
-                <section class="charts-section">
-                    <div class="charts-row">
-                        <div class="chart-item">
-                            <h3>Internal Brokers - RedNote Leads</h3>
-                            <div class="chart-container">
-                                <canvas id="internalBrokersChart"></canvas>
-                            </div>
-                        </div>
-                        <div class="chart-item">
-                            <h3>External Brokers - RedNote Leads</h3>
-                            <div class="chart-container">
-                                <canvas id="externalBrokersChart"></canvas>
-                            </div>
-                        </div>
-                    </div>
-                </section>
+        <section class="kpi-section">
+            <h2>External Brokers</h2>
+            <div class="kpi-grid" id="external-brokers">
+                <!-- External broker KPI cards will be populated here -->
             </div>
-        </main>
-    </div>
+        </section>
+    </main>
 
-    <script src="script.js"></script>
+    <script src="/script.js"></script>
 </body>
 </html>

@@ -1,0 +1,39 @@
+{
+  "brokers": [
+    {
+      "name": "Linduo",
+      "type": "external",
+      "settledQuantity": 1,
+      "allocatedRedLeads": 14,
+      "settleRate": 0.07142857142857142
+    },
+    {
+      "name": "Ziv",
+      "type": "external",
+      "settledQuantity": 4,
+      "allocatedRedLeads": 89,
+      "settleRate": 0.0449438202247191
+    },
+    {
+      "name": "Yuki",
+      "type": "external",
+      "settledQuantity": 2,
+      "allocatedRedLeads": 142,
+      "settleRate": 0.014084507042253521
+    },
+    {
+      "name": "Miao (Amy)",
+      "type": "internal",
+      "settledQuantity": 5,
+      "allocatedRedLeads": 155,
+      "settleRate": 0.03225806451612903
+    },
+    {
+      "name": "QianShuo(Jo)",
+      "type": "internal",
+      "settledQuantity": 16,
+      "allocatedRedLeads": 332,
+      "settleRate": 0.04819277108433735
+    }
+  ]
+}

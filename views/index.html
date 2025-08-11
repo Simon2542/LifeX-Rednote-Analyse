@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LifeX - Rednote Customer Settle Rate Dashboard</title>
+    <link rel="stylesheet" href="/styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700;900&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels@2"></script>
+</head>
+<body>
+    <nav class="top-navigation">
+        <div class="nav-container">
+            <div class="nav-menu">
+                <a href="/" class="nav-link active">Main Dashboard</a>
+                <a href="/internal-analyse" class="nav-link">Internal Broker Analyse</a>
+            </div>
+        </div>
+    </nav>
+
+    <header>
+        <div class="header-content">
+            <img src="lifex_styles/lifex_logo.png" alt="LifeX Logo" class="logo">
+            <h1>Rednote Customer Settle Rate Dashboard</h1>
+        </div>
+    </header>
+
+    <main class="dashboard">
+        <section class="upload-section" id="upload-section">
+            <h2>Upload Excel File</h2>
+            <div class="upload-container">
+                <div class="upload-area" id="uploadArea">
+                    <div class="upload-icon">📁</div>
+                    <p>Click to select or drag & drop your Excel file here</p>
+                    <p class="upload-hint">Supports .xlsx and .xls files</p>
+                    <input type="file" id="fileInput" accept=".xlsx,.xls" style="display: none;">
+                </div>
+                <div class="upload-status" id="uploadStatus"></div>
+            </div>
+        </section>
+
+        <section class="data-visualization" id="data-visualization" style="display: none;">
+            <section class="kpi-section">
+                <div class="section-header">
+                    <h2>All Brokers</h2>
+                    <button class="upload-new-btn" id="uploadNewBtn" onclick="showUploadSection()">
+                        📁 Upload New File
+                    </button>
+                </div>
+                <div class="kpi-grid" id="all-brokers">
+                    <div class="broker-cards" id="internal-brokers">
+                        <!-- Internal broker KPI cards will be populated here -->
+                    </div>
+                    <div class="broker-cards" id="external-brokers">
+                        <!-- External broker KPI cards will be populated here -->
+                    </div>
+                </div>
+            </section>
+
+            <section class="charts-section">
+                <div class="charts-container">
+                    <div class="chart-wrapper">
+                        <h3 class="chart-title">Internal Brokers Performance</h3>
+                        <div class="chart-container">
+                            <canvas id="internal-chart"></canvas>
+                        </div>
+                    </div>
+                    <div class="chart-wrapper">
+                        <h3 class="chart-title">External Brokers Performance</h3>
+                        <div class="chart-container">
+                            <canvas id="external-chart"></canvas>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </section>
+    </main>
+
+    <script src="/script.js"></script>
+</body>
+</html>
